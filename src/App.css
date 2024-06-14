@@ -1,38 +1,156 @@
-.App {
+body
+{
+  background-color: #EBEBEB;
+  color: #F45B69;
+  font-family: "Varela Round", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+h1
+{
   text-align: center;
+  font-size: 6rem;
+  animation-name: Scale;
+  animation-duration: 1.5s;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+p
+{
+  text-align: center;
+  font-size: 2rem;
+  animation-name: fadeIn;
+  animation-duration: 3s;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+#root
+{
+  height: 100%;
+}
+Table
+{
+  margin-left: 30.25%;
+  height: 40vh;
+  width: 40vw;
+  animation-name: scaleUp;
+  animation-duration: 2s;
+}
+td
+{
+  width: 100px;
+  height: 100px;
+  text-align: center;
+  font-size: 3rem;
+}
+button
+{
+  background-color: #F45B69;
+  border-radius: 50%;
+  margin-left: 47.5%;
+  border: none;
+  /* animation-name: Scale;
+  animation-duration: 1.5s; */
+}
+button:hover
+{
+  scale: 125%;
+  margin: none;
+  animation-name: hoverScale;
+  animation-duration: 1.5s;
+}
+button:active
+{
+  /*scale: 150%;*/
+  animation-name: clickScale;
+  animation-duration: 1.5s;
+}
+.onload
+{
+  animation-name: Scale;
+  animation-duration: 1.5s;
+}
+.nohover
+{
+  scale: 100%;
+  animation-name:hoverScaleDown;
+  animation-duration: 1.5s;
+}
+@keyframes hoverScale
+{
+  0%
+  {
+    scale: 100%;
+  }
+  100%
+  {
+    scale: 125%;
+  }
+}
+@keyframes hoverScaleDown
+{
+  0%
+  {
+    scale: 125%;
+  }
+  100%
+  {
+    scale: 100%;
+  }
+}
+@keyframes Scale
+{
+  0%
+  {
+    scale: 0%;
+    opacity: 0%;
+  }
+  100%
+  {
+    scale: 100%;
+    opacity: 100%;
   }
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+@keyframes fadeIn 
+{
+  0%
+  {
+    opacity: 0%;
   }
-  to {
-    transform: rotate(360deg);
+  50%
+  {
+    opacity: 0%;
+  }
+  100%
+  {
+    opacity: 100%;
+  }
+}
+
+@keyframes scaleUp
+{
+  0%
+  {
+    opacity: 0%;
+    scale: 0%;
+    margin-top: 100%;
+  }
+  100%
+  {
+    opacity: 100%;
+    scale: 100%;
+    margin-top: 0%;
+  }
+}
+@keyframes clickScale
+{
+  0%
+  {
+    scale: 125%;
+  }
+  50%
+  {
+    scale: 150%;
+  }
+  100%
+  {
+    scale: 125%;
   }
 }
